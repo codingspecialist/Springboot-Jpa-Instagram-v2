@@ -1,0 +1,90 @@
+#explore {
+  display: flex;
+  justify-content: center;
+}
+
+.explore__users {
+}
+
+.explore__users .explore__user {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, .0975);
+}
+
+.explore__users .explore__user:last-child {
+  border: 0;
+}
+
+.explore__user .explore__content {
+  display: flex;
+  align-items: center;
+}
+
+.explore__user .explore__content img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-right: 15px;
+  transform-style: preserve-3d;
+  animation: 6s potato infinite ease-in-out;
+}
+
+@keyframes horse {
+  to {
+    transform: none;
+  }
+  from {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes potato {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.explore__info .explore__username {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.explore__info .explore__full-name {
+  color: #999;
+}
+
+.explore__user button {
+  border: 1px solid #3897f0;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+  background: #3897f0;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.explore__user button:hover {
+  background: white;
+  color: #3897f0;
+}
+
+.explore__user button:focus {
+  outline: none;
+}
+
+.explore__user button:active {
+  opacity: 0.5;
+}

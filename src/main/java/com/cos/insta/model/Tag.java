@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.Data;
 
+// 태그 검색은 안함.
 @Data
 @Entity
 public class Tag {

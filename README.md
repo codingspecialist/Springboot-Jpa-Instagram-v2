@@ -79,4 +79,4 @@ file:
 <https://blog.naver.com/getinthere/221728643538>
 
 #### 4. Youtube 주소
-<https://www.youtube.com/watch?v=4Uu8t3RfNwE>
+<https://www.youtube.com/watch?v=LD-1629X4jA>

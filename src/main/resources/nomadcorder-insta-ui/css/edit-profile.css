@@ -1,0 +1,38 @@
+#edit-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-profile__header {
+  display: flex;
+  align-items: center;
+}
+
+.edit-profile__header img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.edit-profile__header .fucker-container {
+  margin-right: 20px;
+  width: 120px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-profile__container {
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.edit-profile__row {
+  display: flex;
+  align-items: center;
+}
+
+.edit-profile__row .edit-profile__label {
+  width: 120px;
+  text-align: right;
+  margin-right: 20px;
+}

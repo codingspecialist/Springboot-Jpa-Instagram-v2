@@ -1,0 +1,29 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 55px;
+}
+
+footer .footer__list {
+  display: flex;
+}
+
+.footer__list .footer__item {
+  margin-right: 10px;
+}
+
+.footer__item .footer__link {
+  color: #003569;
+}
+
+footer .footer__copyright {
+  color: #999;
+}

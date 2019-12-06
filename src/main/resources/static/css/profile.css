@@ -1,0 +1,190 @@
+#profile {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  font-size: 16px;
+}
+
+#profile .profile__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.profile__header .profile__info {
+  width: 70%;
+}
+
+.profile__header .avatar__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.avatar__container img {
+  border-radius: 50%;
+  animation: 6s potato infinite ease-in-out;
+}
+
+.profile__info .profile__title,
+.profile__info .profile__stats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile__title h1 {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.profile__title a {
+  margin-right: 10px;
+}
+
+.profile__title a button {
+  border: 0;
+  font-weight: 600;
+  padding: 5px 15px;
+  background: transparent;
+  border-radius: 3px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, .0975);
+}
+
+.profile__title i {
+  cursor: pointer;
+  font-size: 22px;
+  animation: 1s rotate infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.profile__stats .profile__stat {
+  margin-right: 45px;
+}
+
+.profile__stat .profile__stat-number {
+  font-weight: 600;
+}
+
+.profile__bio .profile__fullname,
+.profile__bio .profile__link {
+  font-weight: 600;
+}
+
+.profile__bio .profile__link {
+  color: #385185;
+}
+
+.profile__photo-row .profile__photo {
+  width: 32%;
+}
+
+.profile__photo a img {
+  max-width: 100%;
+}
+
+.profile__photo {
+  position: relative;
+}
+
+.profile__photo .profile__photo-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.profile__photo-overlay .profile__photo-stat {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.profile__photo-overlay .profile__photo-stat:first-child {
+  margin-right: 20px;
+}
+
+.profile__photo:hover .profile__photo-overlay {
+  opacity: 1;
+}
+
+.profile__photo-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.profile__photo-stat i.fa-heart {
+  transform: scale(40);
+  animation: .5s pump infinite linear;
+}
+
+@keyframes pump {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.profile__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.profile__overlay i {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.profile__overlay-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.profile__overlay-link {
+  background: white;
+  width: 400px;
+  text-align: center;
+  padding: 20px 0;
+  color: inherit;
+  border-bottom: 1px solid #e6e6e6;
+  transition: background .5s ease-out;
+}
+
+.profile__overlay-link:hover {
+  background: #efefef;
+}

@@ -1,0 +1,35 @@
+@media screen and (min-width: 320px) and (max-width: 670px) {
+  main {
+    margin-top: 0;
+  }
+
+  .navigation input {
+    display: none;
+  }
+
+  .photo .photo__add-comment-container {
+    display: none;
+  }
+
+  .u-default-box {
+    background-color: transparent;
+    border: none;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer .footer__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer__list .footer__item {
+    margin-bottom: 10px;
+  }
+
+  .photo {
+    margin-bottom: 30px;
+  }
+}

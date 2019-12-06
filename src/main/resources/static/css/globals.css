@@ -1,0 +1,34 @@
+body {
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  margin: 60px 0;
+  animation: .5s popIn ease-out;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.u-default-box {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, .0975);
+  border-radius: 3px;
+}

@@ -1,0 +1,85 @@
+/* 모달 */
+#modal {
+	display: none;
+}
+
+#modal.active {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0, 0.6);
+	z-index: 999;
+}
+
+#follow_popup_list {
+	background: #FFF;
+	padding: 20px;
+	position: fixed;
+	width: 400px;
+	left: 10%;
+	right: 10%;
+	margin: 0 auto;
+	top: 30%;
+	overflow-y: scroll;
+	height: 400px;
+}
+
+.follow_popup_item {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px dashed #999;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.follow_popup_item img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.follow_popup_item p {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.following_btn {
+	height: 30px;
+	width: 80px;
+	background-color: transparent;
+	color: black;
+	border-radius: 5px;
+	border: 1px solid dbdbdb;
+	font-weight: 600;
+}
+
+.follower_btn {
+	height: 30px;
+	width: 80px;
+	background-color: #3c88de;
+	color: white;
+	border-radius: 5px;
+	border: 0px;
+	font-weight: 600;
+}
+
+.follow_popup_close {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.follow_popup_close button {
+	height: 30px;
+	width: 80px;
+	background-color: #3c88de;
+	color: white;
+	border-radius: 5px;
+	border: 0px;
+	font-weight: 600;
+}

@@ -76,14 +76,6 @@
   border-color: #999;
 }
 
-.login__form input:first-child {
-  margin-bottom: 10px;
-}
-
-.login__form input:nth-child(2) {
-  margin-bottom: 12px;
-}
-
 .login__form input[type="submit"] {
   border: 0;
   color: white;

@@ -9,6 +9,7 @@
     rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
   <nav class="navigation">
@@ -20,7 +21,7 @@
       <a href="explore.html" class="navigation__link">
           <i class="fa fa-compass"></i>
       </a>
-      <a href="#" class="navigation__link">
+      <a href="#" class="navigation__link follow_popup">
           <i class="fa fa-heart-o"></i>
       </a>
       <a href="profile.html" class="navigation__link">
@@ -109,7 +110,33 @@
     </nav>
     <span class="footer__copyright">© 2017 jejugram</span>
   </footer>
+
+<!-- Modal 시작 -->
+<div id="modal">
+  <div id="follow_popup_list">
+
+    <div class="follow_popup_item"> 
+      <img src="/images/avatar.jpg" alt="코스사진">
+      <p><a href="#">코스</a></p>
+      <button class="following_btn">팔로잉</button>	
+    </div>
+
+    <div class="follow_popup_item"> 
+      <img src="/images/avatar.jpg" alt="코스사진">
+      <p><a href="#">코스</a></p>
+      <button class="follower_btn">팔로워</button>	
+    </div>
+
+    <div class="follow_popup_close">
+      <button type="button">닫기</button>
+    </div>
+  </div>
+  
+</div>
+<!-- Modal 끝 --> 
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html>

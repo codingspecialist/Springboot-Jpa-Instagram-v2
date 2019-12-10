@@ -1,0 +1,155 @@
+#login {
+  width: 75%;
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  flex-wrap: nowrap;
+}
+
+#login .login__column {
+  width: 47%;
+}
+
+#login .login__column img {
+  max-width: 100%;
+}
+
+.login__column .login__box {
+  background: white;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+}
+
+.login__column .login__box:nth-child(2) {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.login__column .login__t-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__appstores {
+  margin-top: 20px;
+}
+
+.login__appstores .login__appstore {
+  height: 37px;
+}
+
+.login__box .login__blue-link {
+  color: #3897f0;
+}
+
+.login__column .login__box:first-child {
+  padding: 25px 40px 25px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__box .login__form {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login__form input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px 7px 7px 7px;
+  font-size: 14px;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+}
+
+.login__form input:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.login__form input:first-child {
+  margin-bottom: 10px;
+}
+
+.login__form input:nth-child(2) {
+  margin-bottom: 12px;
+}
+
+.login__form input[type="submit"] {
+  border: 0;
+  color: white;
+  font-weight: 600;
+  background-color: #3897f0;
+  padding: 7px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  border: 0;
+  color: white;
+  font-weight: 600;
+  background-color: red;
+  padding: 7px;
+}
+
+.login__box .login__divider {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #999;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.login__box .login__divider:before {
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: #999;
+  position: absolute;
+  top: 7px;
+  left: 0px;
+}
+
+.login__box .login__divider:after {
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: #999;
+  position: absolute;
+  top: 7px;
+  right: 0px;
+}
+
+.login__box .login__fb-link {
+  margin-bottom: 20px;
+}
+
+.login__box .login__small-link {
+  font-size: 12px;
+}
+.login__fb-link,
+.login__small-link {
+  color: #385185;
+}
+/*
+.fixed {
+  width: 30px;
+  height: 30px;
+  background: red;
+  position: fixed;
+  top: 30px;
+  right: 0;
+  width: 100%;
+}*/

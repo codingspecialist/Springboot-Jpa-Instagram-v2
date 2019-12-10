@@ -38,7 +38,7 @@ public class Image{
 	
 	// (1) Like List
 	@OneToMany(mappedBy = "image")
-	private List<Like> likes = new ArrayList<>();
+	private List<Likes> likes = new ArrayList<>();
 	
 	// (2) Tag List
 	@OneToMany(mappedBy = "image")

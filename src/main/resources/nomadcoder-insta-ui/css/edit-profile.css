@@ -1,0 +1,33 @@
+#edit-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-profile__container {
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.edit-profile__header {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+}
+
+.edit-profile__header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;  
+}
+
+.edit-profile__form {
+  margin-top: 10px;
+}
+
+
+.edit-profile__row {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 6px 0;
+  justify-content: space-between;
+}

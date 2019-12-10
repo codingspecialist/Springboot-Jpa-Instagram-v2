@@ -2,12 +2,9 @@ package com.cos.insta.test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cos.insta.model.Follow;
@@ -202,6 +199,11 @@ public class TestController {
 	@GetMapping("/test/imageUpload")
 	public String testImageUpload() {
 		return "image/image_upload";
+	}
+	
+	@GetMapping("/test/explore")
+	public String testExplore() {
+		return "image/explore";
 	}
 }
 

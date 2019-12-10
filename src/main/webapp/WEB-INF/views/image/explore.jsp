@@ -19,42 +19,6 @@
   <%@ include file="../include/nav.jsp" %>
   
   <main id="profile">
-    <header class="profile__header">
-      <div class="avatar__container">
-          <form id="frm_profile_img" action="/user/profileUpload" method="post">
-            <input type="file" name="profileImage" style="display: none;"/>
-          </form>
-          <img src="/images/avatar.jpg" id="profile_image" style="cursor:pointer" />
-      </div>
-      <div class="profile__info">
-        <div class="profile__title">
-          <h1>serranoarevalo</h1>
-          <a href="edit-profile.html">
-            <button>Edit Profile</button>
-          </a>
-          <i class="fa fa-cog fa-lg"></i>
-        </div>
-        <ul class="profile__stats">
-          <li class="profile__stat">
-            <span class="profile__stat-number">313</span> posts
-          </li>
-          <li class="profile__stat">
-            <span class="profile__stat-number">4,444</span> followers
-          </li>
-          <li class="profile__stat">
-            <span class="profile__stat-number">44</span> following
-          </li>
-        </ul>
-        <p class="profile__bio">
-          <span class="profile__fullname">Nicolás Serrano Arévalo</span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Voluptas repellendus cumque quo voluptatum voluptatem,
-          maxime nobis. Quae incidunt cum expedita facilis libero officiis,
-          delectus inventore tempore, ex nulla dolore cumque.
-          <a href="http://serranoarevalo.com" class="profile__link">serranoarevalo.com</a>
-        </p>
-      </div>
-    </header>
     <div class="profile__photo-grid">
       <div class="profile__photo-row">
         <div class="profile__photo">

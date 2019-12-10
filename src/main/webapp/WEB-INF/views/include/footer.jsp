@@ -16,7 +16,7 @@
 			<li class="footer__item"><a href="#" class="footer__link">Language</a></li>
 		</ul>
 	</nav>
-	<span class="footer__copyright">© 2017 jejugram</span>
+	<span class="footer__copyright">© Costagram</span>
 </footer>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="/js/app.js"></script>

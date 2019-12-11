@@ -1,15 +1,22 @@
 package com.cos.insta.controller;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.cos.insta.model.User;
+import com.cos.insta.repository.FollowRepository;
 import com.cos.insta.repository.UserRepository;
+import com.cos.insta.service.MyUserDetail;
 
 @Controller
 public class UserController {
@@ -21,6 +28,9 @@ public class UserController {
 	
 	@Autowired
 	private UserRepository mUserRepository;
+	
+	@Autowired
+	private FollowRepository mFollowRepository;
 	
 	@GetMapping("/auth/login")
 	public String authLogin() {
@@ -44,4 +54,35 @@ public class UserController {
 		
 		return "redirect:/auth/login";
 	}
+	
+	@GetMapping("/user/{id}")
+	public String profile(
+			@PathVariable int id,
+			@AuthenticationPrincipal MyUserDetail userDetail,
+			Model model) {
+		
+		/**
+		 *   1. imageCount
+		 *   2. followerCount
+		 *   3. followingCount
+		 *   4. User 오브젝트 (Image (likeCount) 컬렉션)
+		 *   5. followCheck 팔로우 유무 (1 팔로우, 1이 아니면 언팔로우)
+		 */
+		
+		// 4번 임시(수정해야함)
+		Optional<User> oToUser = mUserRepository.findById(id);
+		User toUser = oToUser.get();
+		model.addAttribute("toUser", toUser);
+		
+		// 5번
+		User user = userDetail.getUser();
+		
+		int followCheck = mFollowRepository.countByFromUserIdAndToUserId(user.getId(), id);
+		log.info("followCheck : "+followCheck);
+		model.addAttribute("followCheck", followCheck);
+		
+		return "user/profile";
+	}
+	
+	
 }

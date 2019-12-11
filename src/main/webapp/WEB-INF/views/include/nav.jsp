@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <nav class="navigation">
 	<a href="feed.html"> <img src="/images/logo.png" />
 	</a> <input type="text" placeholder="Search">
@@ -27,7 +29,7 @@
     <div class="follow_popup_item"> 
       <img src="/images/avatar.jpg" alt="코스사진">
       <p><a href="#">코스</a></p>
-      <button class="follower_btn">팔로워</button>	
+      <button class="follow_btn">팔로우</button>	
     </div>
 
     <div class="follow_popup_close">

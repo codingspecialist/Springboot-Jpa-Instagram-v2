@@ -2,19 +2,33 @@ package com.cos.insta.test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cos.insta.model.Follow;
 import com.cos.insta.model.Image;
 import com.cos.insta.model.Likes;
 import com.cos.insta.model.User;
+import com.cos.insta.repository.UserRepository;
 
 @Controller
 public class TestController {
 
+	@Autowired
+	private UserRepository mUserRepository;
+	
+	@GetMapping("/test/user/{id}")
+	public @ResponseBody User testUser(@PathVariable int id) {
+		Optional<User> oUser = mUserRepository.findById(id);
+		User user = oUser.get();
+		return user;
+	}
+	
 	@GetMapping("/test/home")
 	public String testHome() {
 		return "home";
@@ -205,6 +219,7 @@ public class TestController {
 	public String testExplore() {
 		return "image/explore";
 	}
+	
 }
 
 

@@ -12,6 +12,7 @@ import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
@@ -24,6 +25,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id; // 시퀀스
 	private String username; // 사용자 아이디
+	@JsonIgnore
 	private String password; // 암호화된 패스워드
 	private String name; // 사용자 이름
 	private String website; // 홈페이지 주소

@@ -12,11 +12,12 @@ import com.cos.insta.service.MyUserDetail;
 public class ImageController {
 	
 	
-	private static final Logger log = LoggerFactory.getLogger(ImageController.class);
+	private static final Logger log = 
+			LoggerFactory.getLogger(ImageController.class);
 
-	
 	@GetMapping({"/", "/image/feed"})
-	public String imageFeed(@AuthenticationPrincipal MyUserDetail userDetail) {
+	public String imageFeed(
+			@AuthenticationPrincipal MyUserDetail userDetail) {
 		
 		log.info("username : "+userDetail.getUsername());
 		

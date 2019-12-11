@@ -27,17 +27,12 @@
           <input type="password" name="password" placeholder="Password" required>
           <input type="submit" value="Sign up">
         </form>
-        <span class="login__divider">
-          or
-        </span>
-        <a href="http://facebook.com" class="login__fb-link"><i class="fa fa-facebook-square"></i> Log in with Facebook</a>
-        <a href="#" class="login__small-link">Forgot password?</a>
       </div>
       <div class="login__box">
         <span class="login__text">
-          Don't have an account? <br />
+          Do you have an account? <br />
         </span>
-        <a class="login__blue-link" href="#">Sign up</a>
+        <a class="login__blue-link" href="/auth/login">Sign in</a>
       </div>
       <div class="login__t-box">
         <span class="login__text">

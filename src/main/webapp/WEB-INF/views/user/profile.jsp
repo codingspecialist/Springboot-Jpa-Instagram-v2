@@ -28,14 +28,16 @@
 				<div class="profile__title">
 					<h1>${user.username}</h1>
 					<div id="follow_check">
-						<c:choose>
-							<c:when test="${followCheck eq  1}">
-								<button onClick="follow(false, ${user.id})" class="profile_edit_btn">팔로잉</button>
-							</c:when>
-							<c:otherwise>
-								<button onClick="follow(true, ${user.id})" class="profile_follow_btn">팔로우</button>
-							</c:otherwise>
-						</c:choose>
+						<c:if test="${principalId ne user.id}">
+							<c:choose>
+								<c:when test="${followCheck eq  1}">
+									<button onClick="follow(false, ${user.id})" class="profile_edit_btn">팔로잉</button>
+								</c:when>
+								<c:otherwise>
+									<button onClick="follow(true, ${user.id})" class="profile_follow_btn">팔로우</button>
+								</c:otherwise>
+							</c:choose>
+						</c:if>
 					</div>
 					<a href="/user/edit/${user.id}">
 						<button class="profile_edit_btn">Edit Profile</button>

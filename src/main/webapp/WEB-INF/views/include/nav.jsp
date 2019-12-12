@@ -3,20 +3,20 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <sec:authorize access="isAuthenticated()">
-    <sec:authentication property="principal.user.id" var="principalId" />
+    <sec:authentication property="principal" var="principal" />
 </sec:authorize>
 
 <nav class="navigation">
 	<a href="/"> <img src="/images/logo.png" />
 	</a> <input type="text" placeholder="Search">
 	<div class="navigation__links">
-		<a href="/image/explore/${principalId}" class="navigation__link"> 
+		<a href="/image/explore/${principal.user.id}" class="navigation__link"> 
 			<i class="fa fa-compass"></i>
 		</a> 
 		<a href="#" class="navigation__link like_popup"> 
 			<i class="fa fa-heart-o"></i>
 		</a> 
-		<a href="/user/${principalId}" class="navigation__link"> 
+		<a href="/user/${principal.user.id}" class="navigation__link"> 
 			<i class="fa fa-user-o"></i>
 		</a>
 	</div>

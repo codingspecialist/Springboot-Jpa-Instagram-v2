@@ -6,6 +6,11 @@
   font-size: 16px;
 }
 
+.profile__stat a {
+	text-decoration: none;
+	color: black;
+}
+
 #profile .profile__header {
   display: flex;
   justify-content: space-between;
@@ -95,6 +100,11 @@
 
 .profile__bio .profile__link {
   color: #385185;
+}
+
+.profile__bio {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .profile__photo-row .profile__photo {

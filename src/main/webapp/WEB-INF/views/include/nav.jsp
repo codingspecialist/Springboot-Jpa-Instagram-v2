@@ -8,7 +8,7 @@
 		<a href="explore.html" class="navigation__link"> 
 			<i class="fa fa-compass"></i>
 		</a> 
-		<a href="#" class="navigation__link follow_popup"> 
+		<a href="#" class="navigation__link like_popup"> 
 			<i class="fa fa-heart-o"></i>
 		</a> 
 		<a href="profile.html" class="navigation__link"> 
@@ -17,24 +17,22 @@
 	</div>
 </nav>
 
-<!-- Modal 시작 -->
+<!-- 좋아요 Modal 시작 -->
 <div id="modal">
-  <div id="follow_popup_list">
-    <div class="follow_popup_item"> 
+  <div id="like_popup_list">
+    <div class="like_popup_item"> 
       <img src="/images/avatar.jpg" alt="코스사진">
-      <p><a href="#">코스</a></p>
-      <button class="following_btn">팔로잉</button>	
+      <p><a href="#">누가 누구의 사진을 좋아합니다.</a></p>	
     </div>
 
-    <div class="follow_popup_item"> 
+    <div class="like_popup_item"> 
       <img src="/images/avatar.jpg" alt="코스사진">
-      <p><a href="#">코스</a></p>
-      <button class="follow_btn">팔로우</button>	
+      <p><a href="#">누가 누구의 사진을 좋아합니다.</a></p>	
     </div>
 
-    <div class="follow_popup_close">
+    <div class="like_popup_close">
       <button type="button">닫기</button>
     </div>
   </div>
 </div>
-<!-- Modal 끝 --> 
+<!-- 좋아요 Modal 끝 --> 

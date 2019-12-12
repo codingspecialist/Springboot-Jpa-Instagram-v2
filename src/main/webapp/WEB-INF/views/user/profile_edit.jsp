@@ -11,7 +11,6 @@
     rel="stylesheet">
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/modal.css">
 </head>
 <body>
   <%@ include file="../include/nav.jsp" %>

@@ -84,5 +84,14 @@ public class UserController {
 		return "user/profile";
 	}
 	
+	@GetMapping("/user/edit/{id}")
+	public String userEdit(@PathVariable int id) {
+		
+		// 해당 id로 Select 하기
+		// findByUserInfo() 사용 (만들어야 함)
+		
+		return "user/profile_edit";
+	}
+	
 	
 }

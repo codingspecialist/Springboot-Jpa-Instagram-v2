@@ -1,5 +1,7 @@
 package com.cos.insta.repository;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,4 +16,11 @@ public interface FollowRepository extends JpaRepository<Follow, Integer>{
 	
 	// 팔로우 유무
 	int countByFromUserIdAndToUserId(int fromUserId, int toUserId);
+	
+	// 팔로우 리스트
+	List<Follow> findByFromUserId(int fromUserId);
+	
+	// 팔로워 리스트
+	List<Follow> findByToUserId(int toUser);
+		
 }

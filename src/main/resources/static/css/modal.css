@@ -14,7 +14,7 @@
 	z-index: 999;
 }
 
-#follow_popup_list {
+#like_popup_list {
 	background: #FFF;
 	padding: 20px;
 	position: fixed;
@@ -27,54 +27,35 @@
 	height: 400px;
 }
 
-.follow_popup_item {
+.like_popup_item {
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: auto auto;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
+	grid-gap: 15px;
 	border-bottom: 1px dashed #999;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-.follow_popup_item img {
+.like_popup_item img {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 	cursor: pointer;
 }
 
-.follow_popup_item p {
+.like_popup_item p {
 	display: inline-block;
 	cursor: pointer;
 }
 
-.following_btn {
-	height: 30px;
-	width: 80px;
-	background-color: transparent;
-	color: black;
-	border-radius: 5px;
-	border: 1px solid dbdbdb;
-	font-weight: 600;
-}
-
-.follow_btn {
-	height: 30px;
-	width: 80px;
-	background-color: #3c88de;
-	color: white;
-	border-radius: 5px;
-	border: 0px;
-	font-weight: 600;
-}
-
-.follow_popup_close {
+.like_popup_close {
 	margin-top: 20px;
 	text-align: center;
 }
 
-.follow_popup_close button {
+.like_popup_close button {
 	height: 30px;
 	width: 80px;
 	background-color: #3c88de;

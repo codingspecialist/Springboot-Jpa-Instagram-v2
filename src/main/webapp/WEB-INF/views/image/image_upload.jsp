@@ -8,7 +8,6 @@
 	rel="stylesheet">
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/styles.css">
-<link rel="stylesheet" href="/css/modal.css">
 <link rel="stylesheet" href="/css/image-upload.css">
 </head>
 <body>

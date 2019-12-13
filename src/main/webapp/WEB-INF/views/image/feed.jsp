@@ -29,7 +29,7 @@
 
 			<div class="photo u-default-box">
 				<header class="photo__header">
-					<img src="/images/avatar.jpg" /> 
+					<img src="/upload/${image.user.profileImage}" /> 
 					<div class="photo_user_info">
 						<span class="photo__username">${image.user.username}</span>
 						<span class="photo__location">${image.location}</span>

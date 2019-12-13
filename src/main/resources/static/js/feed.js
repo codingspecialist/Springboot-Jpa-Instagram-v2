@@ -23,7 +23,7 @@ function make_photo_box(image){
 	photo_box += `<span class="photo__username">${image.user.username} </span>`;
 	photo_box += `${image.caption}</div><div class="photo_tag">`;
 	image.tags.forEach(function(tag){
-		photo_box += `${tag.name} `;
+		photo_box += `#${tag.name} `;
 	});
 	photo_box +=`</div>`;
 	photo_box += `<ul class="photo__comments"><li class="photo__comment">`;

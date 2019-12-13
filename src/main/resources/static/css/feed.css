@@ -13,7 +13,30 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  font-weight: 600;
+}
+
+.photo_user_info {
+	display: grid;
+	grid-template-column : auto;
+	grid-gap : 6px 0;
+}
+
+.photo__username {
+	font-weight: 600;
+}
+
+.photo_caption {
+	margin-bottom: 6px;
+}
+
+.photo_tag {
+	color: #0092CF;	
+	margin-bottom: 6px;
+}
+
+.photo_post_image img {
+	width: 600px;
+	max-height: 600px;
 }
 
 .photo__header img {

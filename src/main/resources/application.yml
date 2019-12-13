@@ -44,5 +44,5 @@ spring:
       password: 1234   
 
 file:
-  path: C:/src/instaclone/insta/src/main/resources/static/upload/
+  path: C:/src/instaclone/insta/src/main/resources/upload/
   

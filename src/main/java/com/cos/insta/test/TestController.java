@@ -55,30 +55,30 @@ public class TestController {
 	public String testImageUploadProc(@AuthenticationPrincipal MyUserDetail userDetail,
 			@RequestParam("file") MultipartFile file, @RequestParam("caption") String caption,
 			@RequestParam("location") String location, @RequestParam("tags") String tags) throws IOException{
-
+	
 		// 이미지 업로드 수행
 		UUID uuid = UUID.randomUUID();
 		String uuidFilename = uuid + "_" + file.getOriginalFilename();
-
+	
 		Path filePath = Paths.get(fileRealPath + uuidFilename);
 		if (!Files.exists(filePath)) {
 			Files.createFile(filePath);
 		}
-
+	
 		AsynchronousFileChannel fileChannel = AsynchronousFileChannel.open(filePath, StandardOpenOption.WRITE);
-
+	
 		ByteBuffer buffer = ByteBuffer.allocate((int) file.getSize());
-
+	
 		buffer.put(file.getBytes());
 		buffer.flip();
-
+	
 		Future<Integer> operation = fileChannel.write(buffer, 0);
 		buffer.clear();
-
+	
 		while (!operation.isDone());
-
+	
 		System.out.println("Write done");
-
+	
 		return "redirect:/";
 	}
 	

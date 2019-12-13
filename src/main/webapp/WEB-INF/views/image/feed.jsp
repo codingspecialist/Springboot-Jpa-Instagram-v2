@@ -10,6 +10,14 @@
 	rel="stylesheet">
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/styles.css">
+<style>
+    .big-box {
+      width: 100%;
+      background-color: gray;
+      height: 100vh;
+      border-top: 1px solid black;
+    }
+</style>
 </head>
 <body>
 
@@ -61,12 +69,12 @@
 					</div>
 				</div>
 			</div>
-			
+		
 		</c:forEach>
 		
 	</main>
 
 	<%@ include file="../include/footer.jsp"%>
-
+	<script src="/js/feed.js"></script>
 </body>
 </html>

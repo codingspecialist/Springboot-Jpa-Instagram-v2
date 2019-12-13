@@ -47,5 +47,5 @@ spring:
 #  path: C:/src/instaclone/insta/src/main/resources/upload/
   
 file:
-  path: C:/src/springWork/springboot-jpa-instagram-master/src/main/resources/upload/
+  path: C:/src/springWork/insta/springboot-jpa-instagram/src/main/resources/upload/
   

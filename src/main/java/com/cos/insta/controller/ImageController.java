@@ -25,6 +25,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.cos.insta.model.Image;
@@ -49,6 +50,17 @@ public class ImageController {
 	@Autowired
 	private TagRepository mTagRepository;
 
+	@GetMapping("/image/feed/scroll")
+	public @ResponseBody List<Image> imageFeedScroll(@AuthenticationPrincipal MyUserDetail userDetail,
+			@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+	
+		// 내가 팔로우한 친구들의 사진
+		Page<Image> pageImages = mImageRepository.findImage(userDetail.getUser().getId(), pageable);
+		
+		List<Image> images = pageImages.getContent();
+		return images;
+	}
+	
 	@GetMapping({ "/", "/image/feed" })
 	public String imageFeed(@AuthenticationPrincipal MyUserDetail userDetail,
 			@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC) Pageable pageable, Model model) {

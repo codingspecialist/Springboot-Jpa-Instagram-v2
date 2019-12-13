@@ -41,6 +41,7 @@ public class Image{
 	private List<Likes> likes = new ArrayList<>();
 	
 	// (2) Tag List
+	//@OneToMany(mappedBy = "image", cascade = CascadeType.PERSIST)
 	@OneToMany(mappedBy = "image")
 	@JsonManagedReference
 	private List<Tag> tags = new ArrayList<>();

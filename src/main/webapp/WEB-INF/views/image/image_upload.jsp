@@ -29,7 +29,7 @@
 				</div>
 				<!-- 섬네일은 아래 주소 참고 -->
 				<!-- https://medium.com/@asadise/create-thumbnail-for-an-image-in-spring-framework-49776c873ea1 -->
-				<form action="/images/uploadProc" method="post" enctype="multipart/form-data">
+				<form action="/image/uploadProc" method="post" enctype="multipart/form-data">
 					<table class="table">
 						<tr>
 							<td><input id="input_img" type="file" name="file" placeholder="사진파일"></td>

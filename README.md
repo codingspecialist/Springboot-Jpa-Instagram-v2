@@ -2,17 +2,30 @@
 
 ![blog](https://postfiles.pstatic.net/MjAxOTEyMTRfMTM1/MDAxNTc2MjU4OTMyMjM0.RTRhV5sq3wF1zv7Hh7SqsAKBdYwLxUSnl-5AxXlVrzYg.Q40T906-VCeDkrysRLysPLPma93iJFtUYEaNS_5jOE4g.PNG.getinthere/Screenshot_75.png?type=w773)
 
-![blog](https://postfiles.pstatic.net/MjAxOTEyMTRfNjUg/MDAxNTc2MjU4OTMyMzI4.tvSXYnJkB3pIEc6hLLDtUb503r5gudIA8S2dpx41r-gg.vXYkUSlcnAPjxeiQ0j8TNPOszhQUExvo1_qY6zuK7qQg.PNG.getinthere/Screenshot_76.png?type=w773)
-
 ![blog](https://postfiles.pstatic.net/MjAxOTEyMDZfMTA0/MDAxNTc1NTkzNTkyOTA0.ikXcdjrVxlaUfbyZrtu9kAG4aBTbu-6jdNemoyUvMNcg.xYC-hf0BFdD8LRjPNNuKuWrRuwd-5TuwZfPQ0GZSZOog.PNG.getinthere/Screenshot_2.png?type=w773)
 
-#### 1. 사용자 생성 및 권한 주기 및 DB 생성
+#### 1. MySQL 한글 설정 (my.ini)
+```ini
+[client]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+
+[mysqld]
+collation-server = utf8_unicode_ci
+init-connect='SET NAMES utf8'
+init_connect='SET collation_connection = utf8_general_ci'
+character-set-server=utf8
+```
+
+#### 2. 사용자 생성 및 권한 주기 및 DB 생성
 - create user 'insta'@'%' identified by 'bitc5600';
 - GRANT ALL PRIVILEGES ON 별.별 TO 'insta'@'%';
 - create database insta;
 - use insta;
 
-#### 2. 환경설정
+#### 3. 환경설정
 ```xml
 <!-- JSP 템플릿 엔진 -->
 <dependency>
@@ -79,8 +92,8 @@ file:
   path: C:/src/instaclone/insta/src/main/resources/upload/
 ```
 
-#### 3. Blog 주소
+#### 4. Blog 주소
 <https://blog.naver.com/getinthere/221728643538>
 
-#### 4. Youtube 주소
+#### 5. Youtube 주소
 <https://www.youtube.com/watch?v=LD-1629X4jA>

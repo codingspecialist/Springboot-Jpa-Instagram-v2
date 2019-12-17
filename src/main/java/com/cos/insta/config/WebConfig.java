@@ -10,14 +10,14 @@ import org.springframework.web.servlet.resource.PathResourceResolver;
 public class WebConfig implements WebMvcConfigurer{
 	
 	@Value("${file.path}")
-	private String uploadImagePath;
+	private String fileRealPath;
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		WebMvcConfigurer.super.addResourceHandlers(registry);
 		
 		registry.addResourceHandler("/upload/**")
-		.addResourceLocations("file:///"+uploadImagePath)
+		.addResourceLocations("file:///"+fileRealPath)
 		.setCachePeriod(3600)
 		.resourceChain(true)
 		.addResolver(new PathResourceResolver());

@@ -10,14 +10,6 @@
 	rel="stylesheet">
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/styles.css">
-<style>
-    .big-box {
-      width: 100%;
-      background-color: gray;
-      height: 100vh;
-      border-top: 1px solid black;
-    }
-</style>
 </head>
 <body>
 
@@ -29,7 +21,7 @@
 
 			<div class="photo u-default-box">
 				<header class="photo__header">
-					<img src="/images/avatar.jpg" /> 
+					<img src="/upload/${image.user.profileImage}" onerror="this.onerror=null; this.src='/images/avatar.jpg'"/> 
 					<div class="photo_user_info">
 						<span class="photo__username">${image.user.username}</span>
 						<span class="photo__location">${image.location}</span>
@@ -40,7 +32,19 @@
 				</div>
 				<div class="photo__info">
 					<div class="photo__actions">
-						<span class="photo__action"> <i class="fa fa-heart-o heart"></i>
+						<span class="photo__action"> 
+						
+						<!-- 좋아요(하트) 이미지 -->
+						<c:choose>
+							<c:when test="${image.heart eq true}">
+								<i onclick="onFeedLoad(${image.id})" id="${image.id}" class="fa fa-heart heart heart-clicked"></i>
+							</c:when>
+							<c:otherwise>
+								<i onclick="onFeedLoad(${image.id})" id="${image.id}" class="fa fa-heart-o heart"></i>
+							</c:otherwise>
+						</c:choose>
+						
+						
 						</span> <span class="photo__action"> <i class="fa fa-comment-o"></i>
 						</span>
 					</div>
@@ -76,5 +80,6 @@
 
 	<%@ include file="../include/footer.jsp"%>
 	<script src="/js/feed.js"></script>
+	<script src="/js/like.js"></script>
 </body>
 </html>

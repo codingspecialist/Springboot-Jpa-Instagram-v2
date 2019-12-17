@@ -22,7 +22,7 @@
       <c:forEach var="follower" items="${followers}" varStatus="status">
 	      <li class="explore__user">
 	        <div class="explore__content">
-	          <img src="/images/avatar.jpg" />
+	          <img src="/upload/${follower.fromUser.profileImage}" onerror="this.onerror=null; this.src='/images/avatar.jpg'"/>
 	          <div class="explore__info">
 	            <span class="explore__username">${follower.fromUser.username}</span>
 	          </div>

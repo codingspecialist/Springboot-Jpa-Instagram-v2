@@ -8,36 +8,80 @@
 
 .profile__stat a {
 	text-decoration: none;
-	color: black;
+	color: #0092CF;
 }
 
+/* userProfileUpload 수정 */
 #profile .profile__header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
-.profile__header .profile__info {
+/* 삭제 */
+/* .profile__header .profile__info {
   width: 70%;
-}
+} */
 
 .profile__header .avatar__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
 }
 
+/* userProfileUpload 수정 */
 .avatar__container img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   animation: 6s potato infinite ease-in-out;
 }
 
+/* userProfileUpload 수정 */
+.profile__photo-grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: center;
+	grid-gap: 10px;
+}
+
+/* userProfileUpload 수정 */
 .profile__info .profile__title,
 .profile__info .profile__stats {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: start;
   align-items: center;
   margin-bottom: 30px;
+}
+
+/* userProfileUpload 수정 */
+.profile__stat {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+  text-align: center;
+}
+
+/* userProfileUpload 수정 */
+@media (max-width: 700px) {
+  #profile .profile__header {
+    grid-template-columns: auto;
+  }
+  .profile__photo-grid {
+  	grid-template-columns: auto;
+  }
+  .avatar__container {
+  	margin-top: 20px;
+  	text-align: center;
+  }
+  .profile__info {
+	margin-top: 20px;
+  }
+  .profile__stat {
+  grid-template-columns: auto;
+}
 }
 
 .profile__title h1 {
@@ -107,9 +151,10 @@
 	margin-bottom: 5px;
 }
 
-.profile__photo-row .profile__photo {
+/* 삭제 */
+/* .profile__photo-row .profile__photo {
   width: 32%;
-}
+} */
 
 .profile__photo a img {
   max-width: 100%;
@@ -146,11 +191,12 @@
   opacity: 1;
 }
 
-.profile__photo-row {
+/* 삭제 */
+/* .profile__photo-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-}
+} */
 
 .profile__photo-stat i.fa-heart {
   transform: scale(40);

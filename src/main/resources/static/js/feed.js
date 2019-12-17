@@ -74,5 +74,3 @@ async function load_feed_box(){
 
 
 
-
-

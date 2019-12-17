@@ -19,7 +19,6 @@
 	<main id="profile">
 		<header class="profile__header">
 			<div class="avatar__container">
-				
 				<form id="frm_profile_img" action="/user/profileUpload" method="post" enctype="multipart/form-data">
 					<input type="file" name="profileImage" style="display: none;" />
 				</form>
@@ -29,6 +28,7 @@
 			<div class="profile__info">
 				<div class="profile__title">
 					<h1>${user.username}</h1>
+
 					<c:if test="${principal.user.id ne user.id}">
 						<div id="follow_check">
 							
@@ -70,37 +70,30 @@
 		</header>
 		
 		<div class="profile__photo-grid">
-		
+				
+				<!-- 첫줄 -->
 				<div class="profile__photo">
-					<a href="image-detail.html"> <img src="/images/feedPhoto.jpg">
-						<div class="profile__photo-overlay">
-							<span class="profile__photo-stat"> <i class="fa fa-heart"></i> 504
-							</span> <span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22
-							</span>
-						</div>
-					</a>
+					<a href="image-detail.html"> <img src="/images/feedPhoto.jpg"></a>
+					<div class="profile__photo-overlay">
+						<span class="profile__photo-stat"> <i class="fa fa-heart"></i> 504</span> 
+						<span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22</span>
+					</div>
+				</div>
+				<div class="profile__photo">
+					<a href="image-detail.html"> <img src="/images/feedPhoto.jpg"></a>
+					<div class="profile__photo-overlay">
+						<span class="profile__photo-stat"> <i class="fa fa-heart"></i> 504</span> 
+						<span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22</span>
+					</div>
+				</div>
+				<div class="profile__photo">
+					<a href="image-detail.html"> <img src="/images/feedPhoto.jpg"></a>
+					<div class="profile__photo-overlay">
+						<span class="profile__photo-stat"> <i class="fa fa-heart"></i> 504</span> 
+						<span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22</span>
+					</div>
 				</div>
 				
-				<div class="profile__photo">
-					<a href="image-detail.html"> <img src="/images/feedPhoto.jpg">
-						<div class="profile__photo-overlay">
-							<span class="profile__photo-stat"> <i class="fa fa-heart"></i> 504
-							</span> <span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22
-							</span>
-						</div>
-					</a>
-				</div>
-				
-				<div class="profile__photo">
-					<a href="image-detail.html"> <img src="/images/feedPhoto.jpg">
-						<div class="profile__photo-overlay">
-							<span class="profile__photo-stat"> <i class="fa fa-heart"></i> 504
-							</span> <span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22
-							</span>
-						</div>
-					</a>
-				</div>
-			
 		</div>
 	</main>
 
@@ -120,8 +113,8 @@
 	
 	<script>
 		let userId = ${user.id};
-		let principalId = ${principal.user.id};
-	
+		let principalId = ${principal.user.id}
+
 		$(function() {
 			//이미지 클릭시 업로드창 실행
 			$('#profile_image').click(function() {

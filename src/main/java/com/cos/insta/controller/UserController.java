@@ -63,7 +63,6 @@ public class UserController {
 		return "redirect:/user/"+principal.getId();
 	}
 	
-	
 	@GetMapping("/auth/login")
 	public String authLogin() {
 		return "auth/login";

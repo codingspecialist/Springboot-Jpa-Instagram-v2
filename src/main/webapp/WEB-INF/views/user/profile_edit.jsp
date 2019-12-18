@@ -20,40 +20,40 @@
       
       <header class="edit-profile__header">
         <div class="fucker-container">
-          <img src="/upload/${principal.user.profileImage }" />
+          <img src="/upload/${user.profileImage }" />
         </div>
         <!-- master comments -->
-        <h1 class="edit-profile__username">${principal.user.username}</h1>
+        <h1 class="edit-profile__username">${user.username}</h1>
       </header>
 
       <form:form action="/user/editProc" method="PUT" class="edit-profile__form">
         <div class="edit-profile__row">
           <label class="edit-profile__label" for="name">Name</label>
-          <input id="name" name="name" type="text" value="${principal.user.name}">
+          <input id="name" name="name" type="text" value="${user.name}">
         </div>
         <div class="edit-profile__row">
           <label class="edit-profile__label" for="username">Username</label>
-          <input id="username" name="username" type="text" value="${principal.user.username}">
+          <input id="username" name="username" type="text" value="${user.username}">
         </div>
         <div class="edit-profile__row">
           <label class="edit-profile__label" for="website">Website</label>
-          <input id="website" name="website" type="url" value="${principal.user.website}">
+          <input id="website" name="website" type="url" value="${user.website}">
         </div>
         <div class="edit-profile__row">
           <label class="edit-profile__label" for="bio">Bio</label>
-          <textarea id="bio" name="bio">${principal.user.bio}</textarea>
+          <textarea id="bio" name="bio">${user.bio}</textarea>
         </div>
         <div class="edit-profile__row">
           <label class="edit-profile__label" for="email">Email</label>
-          <input id="email" name="email" type="email" value="${principal.user.email }">
+          <input id="email" name="email" type="email" value="${user.email }">
         </div>
         <div class="edit-profile__row">
           <label class="edit-profile__label" for="phone-number">Phone Number</label>
-          <input id="phone-number" name="phone" type="text" value="${principal.user.phone}">
+          <input id="phone-number" name="phone" type="text" value="${user.phone}">
         </div>
         <div class="edit-profile__row">
           <label class="edit-profile__label" for="gender">Gender</label>
-          <input id="gender" name="gender" type="text" value="${principal.user.gender}">
+          <input id="gender" name="gender" type="text" value="${user.gender}">
         </div>
         <div class="edit-profile__row">
           <span></span>

@@ -90,7 +90,7 @@
 		<div class="profile__overlay-container">
 			<!-- 패스워드 변경 직접 구현 -->
 			<a href="/auth/password" class="profile__overlay-link">Change password</a> 
-			<a href="/logout" class="profile__overlay-link" id="logout">Log Out</a> 
+			<a href="/logout" class="profile__overlay-link" id="logout">Logout</a> 
 			<a href="#" class="profile__overlay-link" id="cancel">Cancel</a>
 		</div>
 	</div>

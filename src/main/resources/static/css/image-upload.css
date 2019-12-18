@@ -40,7 +40,6 @@ body {
 	font-size: 12px;
 }
 
-<!-- Oauth 로그인 수정 -->
 input[type=text], input[type=email] {
 	height: 31.3px;
 	width: 268.02px;
@@ -49,6 +48,7 @@ input[type=text], input[type=email] {
 	padding: 19px;
 	margin: 2px;
 }
+
 input[type=file] {
 	width: 268.02px;
 	margin-bottom: 10px;

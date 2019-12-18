@@ -1,0 +1,175 @@
+[33mcommit 93397902a6a0c565233ccf185e158dd59247e4dd[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mfeature_kakao[m[33m)[m
+Author: ssar <ssar@nate.com>
+Date:   Wed Dec 18 19:04:30 2019 +0900
+
+    카카오 로그인 구현
+
+[33mcommit ae21eb0fb567a82ad4886f024983759861ba2f63[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: ssar <ssar@nate.com>
+Date:   Wed Dec 18 15:43:16 2019 +0900
+
+    프로파일 수정 및 보완 >> 좋아요 알림, 좋아요 feed페이지 카운터 수정, Oauth 남음
+
+[33mcommit afd662e170ea062848006a61d9112c1e17a64d73[m
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 17 19:08:55 2019 +0900
+
+    부분 수정 신경안써도 됨
+
+[33mcommit d8a8c46ddbd3f886834c7a17f60369352beb3d4b[m
+Merge: 33ebde9 6a62e4a
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 17 15:47:54 2019 +0900
+
+    인스타그램 9강 10강 충돌 해결
+
+[33mcommit 33ebde916c81e083fa84bddae71e879695cf98d6[m
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 17 15:40:25 2019 +0900
+
+    인스타그램 JPA 9강 이미지 좋아요 하기 + 10강 프로파일 사진 보이게 하기
+
+[33mcommit 6a62e4a800dcae91afffc158fb2e285d015b8bac[m
+Author: codingspecialist <codingspecialist@naver.com>
+Date:   Sat Dec 14 20:21:36 2019 +0900
+
+    Update README.md
+
+[33mcommit 73448f8e7888ec11d82daa2202937d25b2aa864c[m
+Author: codingspecialist <codingspecialist@naver.com>
+Date:   Sat Dec 14 02:43:06 2019 +0900
+
+    Update README.md
+
+[33mcommit 5baad49414b9ef44e85786d65549e771791182e2[m
+Author: ssar <ssar@nate.com>
+Date:   Sat Dec 14 02:38:50 2019 +0900
+
+    인스타그램 JPA 8-6강 프로파일 이미지 업로드
+
+[33mcommit a126f617294de23500fca71ddafba94aee6ed201[m
+Author: ssar <ssar@nate.com>
+Date:   Sat Dec 14 00:37:59 2019 +0900
+
+    이미지 태그 앞에 # 수정
+
+[33mcommit 6a63d6b544d644a4f67058cf9965ae953f5ab9d2[m
+Author: ssar <ssar@nate.com>
+Date:   Sat Dec 14 00:34:16 2019 +0900
+
+    이미지 경로 수정
+
+[33mcommit c16316b0cde38e3e528fa869494012eabb43794c[m
+Author: ssar <ssar@nate.com>
+Date:   Sat Dec 14 00:31:38 2019 +0900
+
+    스프링부트 JPA인스타그램 8강 Image 5강 이미지 페이징 스크롤
+
+[33mcommit dfc44a99386cb7c056bf4a25e1f2cfa24e96626a[m
+Author: ssar <ssar@nate.com>
+Date:   Fri Dec 13 18:29:18 2019 +0900
+
+    인스타그램 JPA 8-4강 feed 무한 스크롤 테스트
+
+[33mcommit 06b24c6f15b2997669085b3de9b010b6daad2628[m
+Author: ssar <ssar@nate.com>
+Date:   Fri Dec 13 17:21:32 2019 +0900
+
+    인스타그램 JPA 8-2강 이미지 리스트 (feed 완성) 및 8-3 사진 액박 오류 수정
+
+[33mcommit f57a4047299573ec936478b6816cf7fcfed0ed55[m
+Author: ssar <ssar@nate.com>
+Date:   Fri Dec 13 12:02:32 2019 +0900
+
+    인스타그램 JPA 8-1강 이미지, 태그 업로드하기
+
+[33mcommit e5056b8566cd324906dcc001ec043a0321d2d1ff[m
+Author: ssar <ssar@nate.com>
+Date:   Thu Dec 12 14:36:06 2019 +0900
+
+    인스타그램 JPA 7-5강 동적 팔로우 언팔로우 이벤트
+
+[33mcommit 90f48c0cb5142d05d1ec097f84c3e251294e0861[m
+Author: ssar <ssar@nate.com>
+Date:   Thu Dec 12 13:28:15 2019 +0900
+
+    follow, follower 중간 저장
+
+[33mcommit 9ff699341e563038f1afd8cb52f6078bc05c3016[m
+Author: ssar <ssar@nate.com>
+Date:   Thu Dec 12 10:07:11 2019 +0900
+
+    스프링 시큐리티 taglibs로 principal 접근 구현
+
+[33mcommit a6e30ea6662d52d56f7088ce1097cfc6f1d70122[m
+Author: ssar <ssar@nate.com>
+Date:   Thu Dec 12 09:17:09 2019 +0900
+
+    인스타그램 7-1강 follow 페이지 만들기까지
+
+[33mcommit 6d7db972ea89f791706245a915dbec7b0deca8a9[m
+Author: ssar <ssar@nate.com>
+Date:   Wed Dec 11 13:50:57 2019 +0900
+
+    인스타그램 팔로우 완성 - 모달에 출력하는 것 남음
+
+[33mcommit 9a32224d9ae6dc5ad0c442b6ef59de53e0375afd[m
+Author: ssar <ssar@nate.com>
+Date:   Wed Dec 11 12:58:56 2019 +0900
+
+    profile 화면을 위한 follow 테스트 완료
+
+[33mcommit e6dad5e3a294fb1c1521f86b7e632afb8e38baa0[m
+Author: ssar <ssar@nate.com>
+Date:   Wed Dec 11 09:23:45 2019 +0900
+
+    페이지 링크 수정
+
+[33mcommit ef8c39debc627fd5d1611189e3de19a91f59fa82[m
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 10 15:02:25 2019 +0900
+
+    로그인 로그아웃 구현
+
+[33mcommit d87e5b8cd310323c3fdc53c84eb683ed2b2515ac[m
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 10 11:48:50 2019 +0900
+
+    인스타그램 5강 완료 - JSP페이지만들기
+
+[33mcommit c03ca8f092e356996ff935027f275a19d4184b26[m
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 10 10:02:43 2019 +0900
+
+    UI 수정
+
+[33mcommit 1ba372071ea6e47e9d576f7c27a63f1359469a5e[m
+Merge: c461028 8a31fc4
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 10 10:00:11 2019 +0900
+
+    Merge branch 'master' of https://github.com/codingspecialist/springboot-jpa-instagram
+
+[33mcommit c461028d2cf5b1d9e913efd161e660fcbdcba655[m
+Author: ssar <ssar@nate.com>
+Date:   Tue Dec 10 10:00:02 2019 +0900
+
+    Follow + HTML완료
+
+[33mcommit 8a31fc40b96d6be24b1ad94cb636773c6dfaebeb[m
+Author: cos <codingspecialist@naver.com>
+Date:   Sun Dec 8 19:24:08 2019 +0900
+
+    인스타그램 UI 수정
+
+[33mcommit e85f94a7ee1e3d43f83789b7a868cf9676f4e064[m
+Author: ssar <ssar@nate.com>
+Date:   Fri Dec 6 16:19:41 2019 +0900
+
+    follow 완료, 모델 완료, instaUI html 정리 중
+
+[33mcommit 1921ce2b86da5b777308b6c5686bb5f5bfb6b841[m
+Author: ssar <ssar@nate.com>
+Date:   Fri Dec 6 15:02:10 2019 +0900
+
+    인스타 환경세팅+시큐리티 기본세팅+ 모델생성 완료 follow남음

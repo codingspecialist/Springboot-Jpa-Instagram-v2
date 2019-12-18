@@ -116,8 +116,8 @@ public class OAuth2Controller {
 			e.printStackTrace();
 		} 
 		
-		
-		System.out.println(oToken.getAccess_token());
+		// 로그인시 마다 확인가능 (앱 연결해제 때 필요)
+		System.out.println("access_token : "+oToken.getAccess_token());
 		
 		// 회원 프로필 조회 끝 (인증)
 		RestTemplate rt2 = new RestTemplate();

@@ -1,9 +1,12 @@
 let page = 0;
 
 $(window).scroll(function() {
-    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-      page++;
-      load_feed_box(); // 박스 3개씩 로드
+	/*버그 수정 (근사치 계산)*/
+    let checkNum = ($(window).scrollTop()) - ($(document).height() - $(window).height());
+	if (checkNum < 1 && checkNum > -1) {
+    	console.log('hi');
+        page++;
+        load_feed_box(); // 박스 3개씩 로드
     }
 });
 

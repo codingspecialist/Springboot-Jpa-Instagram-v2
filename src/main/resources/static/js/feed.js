@@ -26,7 +26,7 @@ function make_feed_box(image){
 		
 	feed_box += `</span> <span class="photo__action">`;
 	feed_box += `<i class="fa fa-comment-o"></i></span></div>`;
-	feed_box += `<span class="photo__likes">5,103 likes</span><div class="photo_caption">`;
+	feed_box += `<span class="photo__likes">${image.likeCount} likes</span><div class="photo_caption">`;
 	feed_box += `<span class="photo__username">${image.user.username} </span>`;
 	feed_box += `${image.caption}</div><div class="photo_tag">`;
     

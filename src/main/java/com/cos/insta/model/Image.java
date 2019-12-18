@@ -24,6 +24,7 @@ import lombok.Data;
 @Entity
 public class Image{
 	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -56,6 +57,7 @@ public class Image{
 	private Timestamp createDate;
 	@CreationTimestamp
 	private Timestamp updateDate;
+
 	
 }
 

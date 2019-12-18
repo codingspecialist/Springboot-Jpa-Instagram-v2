@@ -21,6 +21,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +35,7 @@ import com.cos.insta.model.Image;
 import com.cos.insta.model.Likes;
 import com.cos.insta.model.Tag;
 import com.cos.insta.model.User;
+import com.cos.insta.repository.FollowRepository;
 import com.cos.insta.repository.ImageRepository;
 import com.cos.insta.repository.UserRepository;
 import com.cos.insta.service.MyUserDetail;
@@ -81,7 +84,6 @@ public class TestController {
 	
 		return "redirect:/";
 	}
-	
 	@GetMapping("/test/user/{id}")
 	public @ResponseBody User testUser(@PathVariable int id) {
 		Optional<User> oUser = mUserRepository.findById(id);

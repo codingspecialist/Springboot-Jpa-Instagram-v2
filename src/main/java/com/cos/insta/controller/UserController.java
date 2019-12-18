@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -15,14 +17,18 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.cos.insta.model.Image;
 import com.cos.insta.model.User;
 import com.cos.insta.repository.FollowRepository;
+import com.cos.insta.repository.LikesRepository;
 import com.cos.insta.repository.UserRepository;
 import com.cos.insta.service.MyUserDetail;
 
@@ -39,6 +45,9 @@ public class UserController {
 	
 	@Autowired
 	private FollowRepository mFollowRepository;
+	
+	@Autowired
+	private LikesRepository mLikesRepository;
 	
 	@Value("${file.path}")
 	private String fileRealPath;
@@ -57,9 +66,16 @@ public class UserController {
 		String uuidFilename = uuid+"_"+file.getOriginalFilename();
 		Path filePath = Paths.get(fileRealPath+uuidFilename);
 		Files.write(filePath, file.getBytes());
+	
+		// 영속화
+		Optional<User> oUser = mUserRepository.findById(principal.getId());		
+		User user = oUser.get();
 		
-		principal.setProfileImage(uuidFilename);
-		mUserRepository.save(principal);
+		// 값 변경
+		user.setProfileImage(uuidFilename);
+		
+		// 다시 영속화 및 저장
+		mUserRepository.save(user);
 		return "redirect:/user/"+principal.getId();
 	}
 	
@@ -86,6 +102,7 @@ public class UserController {
 		return "redirect:/auth/login";
 	}
 	
+	
 	@GetMapping("/user/{id}")
 	public String profile(
 			@PathVariable int id,
@@ -103,8 +120,31 @@ public class UserController {
 		// 4번 임시(수정해야함)
 		Optional<User> oUser = mUserRepository.findById(id);
 		User user = oUser.get();
-		model.addAttribute("user", user);
 		
+		// 1번 imageCount
+		int imageCount = user.getImages().size();
+		model.addAttribute("imageCount", imageCount);
+		
+		// 2번 followCount 
+		// (select count(*) from follow where fromUserId = 1)
+		int followCount = 
+				mFollowRepository.countByFromUserId(user.getId());
+		model.addAttribute("followCount", followCount);
+		
+		// 3번 followerCount 
+		// (select count(*) from follower where toUserId = 1)
+		int followerCount = 
+				mFollowRepository.countByToUserId(user.getId());
+		model.addAttribute("followerCount", followerCount);
+		
+		// 4번 likeCount
+		for(Image item: user.getImages()) {
+			int likeCount = 
+					mLikesRepository.countByImageId(item.getId());
+			item.setLikeCount(likeCount);
+		}
+		
+		model.addAttribute("user", user);
 		// 5번
 		User principal = userDetail.getUser();
 		
@@ -115,14 +155,35 @@ public class UserController {
 		return "user/profile";
 	}
 	
-	@GetMapping("/user/edit/{id}")
-	public String userEdit(@PathVariable int id) {
-		
-		// 해당 id로 Select 하기
-		// findByUserInfo() 사용 (만들어야 함)
+	@GetMapping("/user/edit")
+	public String userEdit() {
 		
 		return "user/profile_edit";
 	}
+	
+@PutMapping("/user/editProc")
+public String userEditProc(
+		User requestUser,
+		@AuthenticationPrincipal MyUserDetail userDetail) {
+	
+	// 영속화
+	Optional<User> oUser = mUserRepository.findById(userDetail.getUser().getId());
+	User user = oUser.get();
+	
+	// 값 변경
+	user.setName(requestUser.getName());
+	user.setUsername(requestUser.getUsername());
+	user.setWebsite(requestUser.getWebsite());
+	user.setBio(requestUser.getBio());
+	user.setEmail(requestUser.getEmail());
+	user.setPhone(requestUser.getPhone());
+	user.setGender(requestUser.getGender());
+	
+	// 다시 영속화 및 flush
+	mUserRepository.save(user);
+	
+	return "redirect:/user/"+userDetail.getUser().getId();
+}
 	
 	
 }

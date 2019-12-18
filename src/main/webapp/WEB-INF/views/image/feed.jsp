@@ -50,7 +50,7 @@
 						</span> <span class="photo__action"> <i class="fa fa-comment-o"></i>
 						</span>
 					</div>
-					<span class="photo__likes">5,103 likes</span>
+					<span class="photo__likes">${image.likeCount} likes</span>
 					<div class="photo_caption">
 						<span class="photo__username">
 							${image.user.username}

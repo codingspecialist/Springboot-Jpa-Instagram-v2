@@ -1,7 +1,6 @@
 package com.cos.insta.config;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 		http.cors().disable();
 		http.authorizeRequests()
-		.antMatchers("/", "/user/**", "/follow/**", "/image/**", "/react/**")
+		.antMatchers("/", "/user/**", "/follow/**", "/image/**")
 		.authenticated()
 		.anyRequest()
 		.permitAll()
@@ -64,6 +63,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(encodePWD());
 	}
+	
+	
 
 
 

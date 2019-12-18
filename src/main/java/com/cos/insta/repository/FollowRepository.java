@@ -23,4 +23,9 @@ public interface FollowRepository extends JpaRepository<Follow, Integer>{
 	// 팔로워 리스트 (맞팔 체크 후 버튼 색깔 결정)
 	List<Follow> findByToUserId(int toUserId);
 		
+	// 팔로우 카운트
+	int countByFromUserId(int fromUserId);
+	
+	// 팔로워 카운트
+	int countByToUserId(int toUserId);
 }

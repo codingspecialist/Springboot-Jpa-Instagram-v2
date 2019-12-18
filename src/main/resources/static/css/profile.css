@@ -41,10 +41,11 @@
 /* userProfileUpload 수정 */
 .profile__photo-grid {
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: center;
 	grid-gap: 10px;
 }
+
 
 /* userProfileUpload 수정 */
 .profile__info .profile__title,
@@ -158,6 +159,8 @@
 
 .profile__photo a img {
   max-width: 100%;
+  width:100%;
+  height:300px;
 }
 
 .profile__photo {

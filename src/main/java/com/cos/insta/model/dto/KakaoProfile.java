@@ -1,4 +1,4 @@
-package com.cos.insta.model;
+package com.cos.insta.model.dto;
 
 import lombok.Data;
 

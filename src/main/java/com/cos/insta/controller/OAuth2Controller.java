@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
 
-import com.cos.insta.model.KakaoProfile;
-import com.cos.insta.model.OAuth2Token;
 import com.cos.insta.model.User;
+import com.cos.insta.model.dto.KakaoProfile;
+import com.cos.insta.model.dto.OAuth2Token;
 import com.cos.insta.repository.UserRepository;
 import com.cos.insta.service.MyUserDetailService;
 import com.fasterxml.jackson.databind.ObjectMapper;

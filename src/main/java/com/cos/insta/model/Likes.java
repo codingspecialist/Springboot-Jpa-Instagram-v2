@@ -30,7 +30,7 @@ public class Likes {
 	
 	@ManyToOne
 	@JoinColumn(name = "userId")
-	@JsonIgnoreProperties({"images", "password", "name", "website", "bio", "email", "phone", "gender", "createDate", "updateDate"})
+	@JsonIgnoreProperties({"images", "password", "name", "website", "bio", "email", "phone", "gender", "createDate", "updateDate", "provider", "providerId"})
 	private User user; // id, username, profileImage
 	
 	@ManyToOne

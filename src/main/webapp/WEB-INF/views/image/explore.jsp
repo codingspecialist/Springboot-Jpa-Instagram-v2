@@ -22,11 +22,12 @@
     	<!-- 유저가 업로드한 Feed 사진 -->
 		<c:forEach var="image" items="${images}">
 			<div class="profile__photo">
-				<a href="image-detail.html"> <img src="/upload/${image.postImage}"></a>
-				<div class="profile__photo-overlay">
-					<span class="profile__photo-stat"> <i class="fa fa-heart"></i> ${image.likeCount}</span> 
-					<span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22</span>
-				</div>
+				<a href="/user/${image.user.id}"> <img src="/upload/${image.postImage}">	
+					<div class="profile__photo-overlay">
+						<span class="profile__photo-stat"> <i class="fa fa-heart"></i> ${image.likeCount}</span> 
+						<span class="profile__photo-stat"> <i class="fa fa-comment"></i> 22</span>
+					</div>
+				</a>
 			</div>									
 		</c:forEach>
 

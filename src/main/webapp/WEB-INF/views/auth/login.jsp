@@ -28,7 +28,9 @@
         <span class="login__divider">
           or
         </span>
-        <a href="http://facebook.com" class="login__fb-link"><i class="fa fa-facebook-square"></i> Log in with Facebook</a>
+        <a href="/auth/kakao/login" class="login__fb-link">
+        	<img width="100%" src="/images/kakao_account_login_btn_medium_wide.png"/>
+        </a>
         <a href="#" class="login__small-link">Forgot password?</a>
       </div>
       <div class="login__box">

@@ -36,6 +36,9 @@ public class User {
 	private String gender;
 	private String profileImage; //프로파일 사진 경로+이름
 	
+	private String provider; // kakao, google, facebook 
+	private String providerId;
+	
 	// (1) findById() 때만 동작
 	// (2) findByUserInfo() 제외
 	@OneToMany(mappedBy = "user")

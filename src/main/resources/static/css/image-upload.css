@@ -39,7 +39,9 @@ body {
 	display: inline-block;
 	font-size: 12px;
 }
-input[type=text] {
+
+<!-- Oauth 로그인 수정 -->
+input[type=text], input[type=email] {
 	height: 31.3px;
 	width: 268.02px;
 	background-color: rgb(250, 250, 250);

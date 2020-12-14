@@ -1,5 +1,7 @@
 ```java
-	System.out.println("hello world");
+class Animal {
+	String name;
+}
 ```
 System.out.println("hello world");
 
